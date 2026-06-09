@@ -1,0 +1,11 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+
+# Code Runner temp files
+tempCodeRunnerFile.*
+
+# VS Code temp files
+.vscode/
