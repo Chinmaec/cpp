@@ -2,8 +2,7 @@
 
 Learning C++ from the ground up.
 
-## Current Progress
-- Following BroCode's C++ tutorial for fundamentals (syntax, data types, control flow, functions, etc.)
+Following BroCode's C++ tutorial for fundamentals (syntax, data types, control flow, functions, etc.)
 
 ## Roadmap
 - [ ] Complete BroCode basics
