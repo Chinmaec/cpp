@@ -1,4 +1,4 @@
-# include <iostream>
+#include <iostream>
 
 int main() {
     // integer (whole number)
@@ -25,7 +25,10 @@ int main() {
     std::string day = "Friday"; 
     std::string food = "Pizza"; 
     std::string address = "123 Fake St.";
-    std::cout << address; 
+
+    std::cout << "Hello " << name << '\n';
+    std::cout << "You are " << age << " years old." << '\n';
+    
     return 0;
     
 }
