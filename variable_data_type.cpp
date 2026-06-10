@@ -28,7 +28,8 @@ int main() {
 
     std::cout << "Hello " << name << '\n';
     std::cout << "You are " << age << " years old." << '\n';
-    
+
     return 0;
     
 }
+
