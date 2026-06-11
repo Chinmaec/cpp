@@ -1,7 +1,6 @@
 # C++ Systems Concepts
 
-Implementing data structures and systems concepts in C++ 
-with a focus on performance-critical applications.
+While Python remains my primary language for quantitative research, I'm exploring C++ to build a stronger understanding of systems programming, performance optimization, and low-level software concepts.
 
 ## Topics
 - [ ] Memory management and pointers
@@ -9,6 +8,4 @@ with a focus on performance-critical applications.
 - [ ] STL containers and algorithms
 - [ ] Performance optimization basics
 
-## Goal
-Building low-level intuition to complement 
-quantitative research work in Python.
+
