@@ -9,3 +9,5 @@ tempCodeRunnerFile.*
 
 # VS Code temp files
 .vscode/
+
+.gitignore
