@@ -1,13 +1,14 @@
-# C++ Learning Journey
+# C++ Systems Concepts
 
-Learning C++ from the ground up.
+Implementing data structures and systems concepts in C++ 
+with a focus on performance-critical applications.
 
-Following BroCode's C++ tutorial for fundamentals (syntax, data types, control flow, functions, etc.)
+## Topics
+- [ ] Memory management and pointers
+- [ ] Data structures (arrays, linked lists, trees)
+- [ ] STL containers and algorithms
+- [ ] Performance optimization basics
 
-## Roadmap
-- [ ] Complete BroCode basics
-- [ ] Move to learncpp.com for deeper understanding
-
-## Resources
-- [BroCode C++](https://www.youtube.com/watch?v=-TkoO8Z07hI)
-- [learncpp.com](https://www.learncpp.com)
+## Goal
+Building low-level intuition to complement 
+quantitative research work in Python.
