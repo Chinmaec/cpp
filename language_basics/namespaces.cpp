@@ -5,7 +5,7 @@ namespace first{
 }
 
 namespace second{
-    int x = 2; 
+    int x = 3; 
 }
 
 int main() {
