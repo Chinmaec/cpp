@@ -7,6 +7,7 @@ namespace first{
 namespace second{
     int x = 2; 
 }
+
 int main() {
     // namespace gives a solution to prevent name conflicts 
     // each entity needs a unique name. It allows identically names entities as long as namespaces are different 
