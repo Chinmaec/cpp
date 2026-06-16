@@ -18,7 +18,10 @@ int main(){
             break;
         case 'D' :
             std::cout << "You did not do good";
-            break; 
+            break;
+        case 'F':
+            std::cout << "You failed";
+            break;
         default: 
         std::cout << "Please only enter in a letter grade (A-F)";  
                  
