@@ -1,0 +1,18 @@
+#include <iostream>
+
+double unrealizedPnl(double qty, double avgPrice, double marketPrice){
+    return (marketPrice - avgPrice) * qty;
+};
+
+void markToMarket(double& currentValue, double qty, double marketPrice){
+    return (qty * marketPrice);
+};
+
+int main(){
+    int qty = 100; 
+    double avgPrice = 250; 
+    double marketPrice = 270;
+    double currentValue = 0.0; 
+
+    return 0;
+}
