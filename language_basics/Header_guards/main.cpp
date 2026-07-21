@@ -1,5 +1,6 @@
 #include "square.h"
 #include <iostream>
+#include "wave.h"
 
 int main()
 {
