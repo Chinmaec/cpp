@@ -1,8 +1,7 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-int SquareArea(int s){
-    return s*s; 
-}
+int getSquareSides();                   // forward declaration for getSquareSides
+int getSquarePerimeter(int sideLength); // forward declaration for getSquarePerimeter
 
 #endif
