@@ -5,7 +5,7 @@ double unrealizedPnl(double qty, double avgPrice, double marketPrice){
 };
 
 void markToMarket(double& currentValue, double qty, double marketPrice){
-    return (qty * marketPrice);
+    return qty * marketPrice;
 };
 
 int main(){
