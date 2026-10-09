@@ -15,10 +15,15 @@ int main(){
 
     char answerKey[] = {'C', 'B', 'A', 'B'};
 
+    int arraysize = sizeof(answerKey) / sizeof(answerKey[0]);
+
+    bool wrong_character = false;
+
     int size = sizeof(questions)/sizeof(questions[0]);
 
     char guess; 
     int score = 0; 
+
 
     for (int i=0; i<size; i++){
         std::cout << "****************************\n";
@@ -31,6 +36,23 @@ int main(){
 
         std::cin >> guess; 
         guess = toupper(guess);
+
+        // validation
+        for (int n = 0; n < arraysize; n++)
+        {
+            if(guess != answerKey[n])
+            {
+                std::cout << "Wrong character. Enter capital letter from options set {A,B,C,D}.\n" << std::endl;
+                wrong_character = true;
+                break;
+            }
+        }
+
+        if (wrong_character == true)
+        {
+            break;
+        }
+
 
         if(guess == answerKey[i]){
             std::cout << "CORRECT!\n";
