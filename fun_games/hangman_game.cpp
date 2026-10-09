@@ -2,34 +2,37 @@
 #include <string>
 #include <random>
 
+using namespace std;
+
 void drawHangman(int attemptsLeft);
-std::string chooseWord();
+string chooseWord();
 
 int main()
 {
-    std::cout << "***********************************************\n";
-    std::cout << "Welcome to the Hangman Game! (Animal Edition)\n";
-    std::cout << "You get a maximum of 6 incorrect attempts\n"; 
+    cout << "***********************************************\n";
+    cout << "Welcome to the Hangman Game! (Animal Edition)\n";
+    cout << "You get a maximum of 6 incorrect attempts\n"; 
 
-    std::string answer = chooseWord();
+    string answer = chooseWord();
     int ans_len = answer.length();
-    std::string display(ans_len,'_');
-    std::cout << display << "\n";
-    std::cout << "Enter your first guess: " << "\n";
+    string display(ans_len,'_');
+    cout << "\n";
+    cout << display << "\n\n";
+    cout << "Enter your first guess: " << "\n";
 
     int i = 6;
-    std::string guessed = ""; 
+    string guessed = ""; 
     bool won = false; 
     while(i > 0){
 
         char u_guess; 
-        std::cin >> u_guess;
+        cin >> u_guess;
         bool found = false; 
 
-        if (guessed.find(u_guess) != std::string::npos)
+        if (guessed.find(u_guess) != string::npos)
         {
-            std::cout << "You have already guessed this letter.";
-            std::cout << "Guessed letters: " << guessed << "\n";
+            cout << "You have already guessed this letter.";
+            cout << "Guessed letters: " << guessed << "\n";
             continue; 
         }
         
@@ -48,25 +51,25 @@ int main()
         }
         if (display == answer)
         {
-            std::cout << answer << "\n"; 
-            std::cout << "You won!\n";
+            cout << answer << "\n"; 
+            cout << "You won!\n";
             won = true;
             break;
         }
 
-        std::cout << display << "\n";
+        cout << display << "\n";
     }
 
     if (!won)
     {
-        std::cout << "You lost :(\n";
-        std::cout << "The answer was: " << answer << "\n";
+        cout << "You lost :(\n";
+        cout << "The answer was: " << answer << "\n";
     }
 }
 
-std::string chooseWord()
+string chooseWord()
 {
-    std::string animalWords[50] = {
+    string animalWords[50] = {
         "tiger", "zebra", "horse", "camel", "sheep", "mouse", "otter", "eagle", "shark", "koala",
         "panda", "moose", "goose", "donkey", "rabbit",
         "giraffe", "gorilla", "leopard", "dolphin", "penguin", "octopus", "squirrel", "hedgehog", "kangaroo", "flamingo",
@@ -78,9 +81,9 @@ std::string chooseWord()
     int min = 0;
     int max = (sizeof(animalWords) / sizeof(animalWords[0])) - 1;
 
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(min, max);
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> distrib(min, max);
 
     int randNum = distrib(gen);
 
@@ -91,72 +94,72 @@ void drawHangman(int attemptsLeft)
 {
     if (attemptsLeft == 6)
     {
-        std::cout << "   _____" << std::endl;
-        std::cout << "  |     |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
+        cout << "   _____" << endl;
+        cout << "  |     |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
     }
     else if (attemptsLeft == 5)
     {
-        std::cout << "   _____" << std::endl;
-        std::cout << "  |     |" << std::endl;
-        std::cout << "  |     O" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
+        cout << "   _____" << endl;
+        cout << "  |     |" << endl;
+        cout << "  |     O" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
     }
     else if (attemptsLeft == 4)
     {
-        std::cout << "   _____" << std::endl;
-        std::cout << "  |     |" << std::endl;
-        std::cout << "  |     O" << std::endl;
-        std::cout << "  |     |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
+        cout << "   _____" << endl;
+        cout << "  |     |" << endl;
+        cout << "  |     O" << endl;
+        cout << "  |     |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
     }
     else if (attemptsLeft == 3)
     {
-        std::cout << "   _____" << std::endl;
-        std::cout << "  |     |" << std::endl;
-        std::cout << "  |     O" << std::endl;
-        std::cout << "  |    /|" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
+        cout << "   _____" << endl;
+        cout << "  |     |" << endl;
+        cout << "  |     O" << endl;
+        cout << "  |    /|" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
     }
     else if (attemptsLeft == 2)
     {
-        std::cout << "   _____" << std::endl;
-        std::cout << "  |     |" << std::endl;
-        std::cout << "  |     O" << std::endl;
-        std::cout << "  |    /|\\" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
+        cout << "   _____" << endl;
+        cout << "  |     |" << endl;
+        cout << "  |     O" << endl;
+        cout << "  |    /|\\" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
     }
     else if (attemptsLeft == 1)
     {
-        std::cout << "   _____" << std::endl;
-        std::cout << "  |     |" << std::endl;
-        std::cout << "  |     O" << std::endl;
-        std::cout << "  |    /|\\" << std::endl;
-        std::cout << "  |    /" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
+        cout << "   _____" << endl;
+        cout << "  |     |" << endl;
+        cout << "  |     O" << endl;
+        cout << "  |    /|\\" << endl;
+        cout << "  |    /" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
     }
     else if (attemptsLeft == 0)
     {
-        std::cout << "   _____" << std::endl;
-        std::cout << "  |     |" << std::endl;
-        std::cout << "  |     O" << std::endl;
-        std::cout << "  |    /|\\" << std::endl;
-        std::cout << "  |    / \\" << std::endl;
-        std::cout << "  |" << std::endl;
-        std::cout << "  |" << std::endl;
+        cout << "   _____" << endl;
+        cout << "  |     |" << endl;
+        cout << "  |     O" << endl;
+        cout << "  |    /|\\" << endl;
+        cout << "  |    / \\" << endl;
+        cout << "  |" << endl;
+        cout << "  |" << endl;
     }
 };

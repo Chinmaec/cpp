@@ -1,6 +1,8 @@
 #include <iostream>
 #include <ctime>
 
+using namespace std;
+
 // char instead of string because char is a data type used to store a single character only. 
 char userChoice();
 char computerChoice();
@@ -12,29 +14,40 @@ int main(){
     char player; 
     char computer; 
 
-    player = userChoice();
-    std::cout << "Your choice: ";
-    showChoice(player);
+    bool loop = true;
+    while (loop == true)
+    {
+        player = userChoice();
 
-    computer = computerChoice();
-    std::cout << "Computer's choice: ";
-    showChoice(computer);
+        if (player == 'q')
+        {
+            break;
+        }
+        
+        cout << "Your choice: ";
+        showChoice(player);
 
-    chooseWinner(player,computer);
+        computer = computerChoice();
+        cout << "Computer's choice: ";
+        showChoice(computer);
 
+        chooseWinner(player,computer);
+
+        cout << "\n" << endl;
+    }
     return 0; 
 }
 
 char userChoice()
 {
     char player;
-    std::cout << "Rock-Paper-Scissors Game!\n";
+    cout << "Rock-Paper-Scissors Game!\n";
 
     // the while loop won't close unless user chooses either r,p, or s
     do{
-        std::cout << "Choose your option('r' for rock, 'p' for paper, 's' for scissors): \n";
-        std::cin >> player;
-    }while(player != 'r' && player != 'p' && player != 's');
+        cout << "Choose your option('r' for rock, 'p' for paper, 's' for scissors, 'q' for quit): \n";
+        cin >> player;
+    }while(player != 'r' && player != 'p' && player != 's' && player != 'q');
 
     return player; 
 };
@@ -58,13 +71,13 @@ void showChoice(char choice)
     switch (choice)
     {
     case 'r':
-        std::cout << "Rock\n";
+        cout << "Rock\n";
         break;
     case 'p':
-        std::cout << "Paper\n";
+        cout << "Paper\n";
         break;
     case 's':
-        std::cout << "Scissors\n";
+        cout << "Scissors\n";
         break;
     }
 
@@ -73,17 +86,17 @@ void showChoice(char choice)
 void chooseWinner(char player, char computer)
 {
     if (player == computer){
-        std::cout << "It's a tie! \n";
+        cout << "It's a tie! \n";
     }
 
     else if ((player == 'r' && computer == 's') || 
              (player == 'p' && computer == 'r') ||
              (player == 's' && computer == 'p'))
     {
-        std::cout << "You win! \n";
+        cout << "You win! \n";
     }
     else    
     {
-        std::cout << "Computer win! \n";
+        cout << "Computer win! \n";
     }
 };
